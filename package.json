@@ -1,5 +1,5 @@
 {
-  "name": "site-vibe-code",
+  "name": "eco-mobi-carga",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,6 +22,9 @@
   },
   "private": true,
   "packageManager": "npm@11.7.0",
+  "config": {
+    "npm_config_legacy_peer_deps": "true"
+  },
   "dependencies": {
     "@angular/common": "^21.0.0",
     "@angular/compiler": "^21.0.0",
