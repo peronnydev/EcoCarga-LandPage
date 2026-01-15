@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cabecalho',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './cabecalho.html',
   styleUrl: './cabecalho.css',
 })
 export class Cabecalho {
+  isMenuOpen = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 }

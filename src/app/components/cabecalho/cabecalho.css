@@ -1,12 +1,149 @@
 .logo-img {
-    max-width: 150px; /* Ajuste este valor conforme desejar (ex: 120px, 180px) */
+    max-width: 150px;
     height: auto;
     display: block;
 }
 
-/* Opcional: Ajuste para telas menores (celulares) */
+/* Navbar Estilos */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--primary-color, #006746);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: var(--primary-dark, #004a32);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color, #006746);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark, #004a32);
+    transform: translateY(-2px);
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color, #006746);
+    padding: 0.5rem;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--primary-dark, #004a32);
+}
+
+/* Responsive - Mobile */
 @media (max-width: 768px) {
     .logo-img {
         max-width: 120px;
+    }
+
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 0;
+        border-radius: 8px;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        max-height: 350px;
+    }
+
+    .nav-menu li {
+        padding: 0.875rem 1.5rem;
+    }
+
+    .nav-menu li:first-child a {
+        padding-top: 0.5rem;
+    }
+
+    .nav-menu li:last-child a {
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-actions {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        max-width: 100px;
+    }
+
+    .nav-menu {
+        top: calc(100% + 8px);
+    }
+
+    .nav-menu li {
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-menu li a {
+        font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+        margin-left: 0.5rem;
+        font-size: 1.25rem;
     }
 }

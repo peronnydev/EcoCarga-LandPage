@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Home } from './components/home/home';
 import { Rodape } from './components/rodape/rodape';
 import { SecaoContato } from './components/secao-contato/secao-contato';
 import { Cabecalho } from './components/cabecalho/cabecalho';
@@ -14,7 +13,6 @@ import { SecaoSolucoes } from './components/secao-solucoes/secao-solucoes';
   imports: [
     RouterOutlet, 
     Cabecalho,
-    Home,
     SecaoContato,
     SecaoHero,
     SecaoLocalizacao,
