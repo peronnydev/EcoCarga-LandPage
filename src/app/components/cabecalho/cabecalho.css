@@ -1,0 +1,12 @@
+.logo-img {
+    max-width: 150px; /* Ajuste este valor conforme desejar (ex: 120px, 180px) */
+    height: auto;
+    display: block;
+}
+
+/* Opcional: Ajuste para telas menores (celulares) */
+@media (max-width: 768px) {
+    .logo-img {
+        max-width: 120px;
+    }
+}
